@@ -42,7 +42,18 @@ function updateCity(event) {
   <div class="time">${cityTime.format("h:mm:ss ")}<small>${cityTime.format(
       "A"
     )}</small></div>
-</div>`;
+</div>
+<a class="all-cities" href="index.html"> ← All Cities</a>`;
+  }
+}
+
+function darkMode() {
+  let body = document.querySelector("body");
+
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
+  } else {
+    body.classList.add("dark");
   }
 }
 
@@ -51,3 +62,6 @@ setInterval(updateTime, 1000);
 
 let citySelect = document.querySelector("#city");
 citySelect.addEventListener("change", updateCity);
+
+let button = document.querySelector(".changeTheme");
+button.addEventListener("click", darkMode);

@@ -1,5 +1,6 @@
 body {
-  background-color: #f9f7fe;
+  background-color: #e3f6f5;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 h1 {
@@ -17,15 +18,18 @@ select {
   width: 100%;
   font-size: 18px;
   padding: 10px;
+  border: 1px solid #272343;
   border-radius: 5px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Space Grotesk", sans-serif;
+  color: #272343;
+  opacity: 0.7;
 }
 
 .container {
   max-width: 600px;
   margin: 60px auto;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border: 1px solid #272343;
+  border-radius: 8px;
   padding: 20px;
   background-color: #ffff;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
@@ -36,7 +40,7 @@ select {
   justify-content: space-between;
   padding: 30px 0;
   margin: 10px 0;
-  border-bottom: 1px dashed lightgrey;
+  border-bottom: 1px dashed #272343;
 }
 
 .city:last-child {
@@ -44,7 +48,8 @@ select {
 }
 
 .date {
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #272343;
 }
 
 .time {
@@ -58,7 +63,89 @@ select {
   line-height: 48px;
 }
 
+.all-cities {
+  text-decoration: none;
+  color: #272343;
+}
+
 footer {
+  margin-top: -30px;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+footer .gitHub {
+  text-decoration: none;
+  color: #272343;
+  opacity: 0.8;
+}
+
+.changeTheme {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -30px;
+  padding: 5px;
+  border: 1px solid #e3f6f5;
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+  font-family: "Space Grotesk", sans-serif;
+  color: #e3f6f5;
+  background: #272343;
+  font-size: 10px;
+}
+
+.changeTheme:hover {
+  cursor: pointer;
+  color: #272343;
+  background: #e3f6f5;
+}
+
+.dark {
+  background: black;
+}
+
+.dark .container {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.dark select {
+  background: #e3f6f5;
+}
+
+.dark .date {
+  color: #e3f6f5;
+}
+
+.dark .city {
+  border-bottom: 1px dashed #e3f6f5;
+}
+
+.dark .city:last-child {
+  border: none;
+}
+
+.dark footer {
+  color: white;
+}
+
+.dark footer .gitHub {
+  color: #e3f6f5;
+}
+
+.dark .all-cities {
+  text-decoration: none;
+  color: white;
+}
+
+.dark .changeTheme {
+  color: #e3f6f5;
+  background: black;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+.dark .changeTheme:hover {
+  background: #e3f6f5;
+  color: black;
 }

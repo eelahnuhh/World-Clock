@@ -8,8 +8,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Changa:wght@200;300;400;500;600;700;800&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <button class="changeTheme">Dark Mode</button>
     <div class="container">
       <h1>World Clock</h1>
       <select name="city" id="city">
@@ -45,10 +52,14 @@
       </div>
     </div>
     <footer>
-      <a href="https://github.com/eelahnuhh/World-Clock" target="_blank">
+      <a
+        class="gitHub"
+        href="https://github.com/eelahnuhh/World-Clock"
+        target="_blank"
+      >
         Open-source code</a
       >
-      by Ilana Smalls
+      by <strong>Ilana Smalls</strong>
     </footer>
     <script src="src/index.js"></script>
   </body>
