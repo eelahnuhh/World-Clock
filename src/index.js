@@ -14,6 +14,14 @@ function updateTime() {
   sydneyTime.innerHTML = moment
     .tz("Australia/Sydney")
     .format("h:mm:ss [<small>]A[</small>]");
+
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDate = tokyoElement.querySelector(".date");
+  let tokyoTime = tokyoElement.querySelector(".time");
+  tokyoDate.innerHTML = moment.tz("Asia/Tokyo").format("MMMM D, YYYY");
+  tokyoTime.innerHTML = moment
+    .tz("Asia/Tokyo")
+    .format("h:mm:ss [<small>]A[</small>]");
 }
 
 function updateCity(event) {
@@ -21,16 +29,18 @@ function updateCity(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment.tz(cityTimeZone);
   let cities = document.querySelector("#cities");
-  cities.innerHTML = `
+  if (event.target.value.length > 0) {
+    cities.innerHTML = `
   <div class="city">
   <div>
     <h2>${cityName}</h2>
     <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
   </div>
   <div class="time">${cityTime.format("h:mm:ss ")}<small>${cityTime.format(
-    "A"
-  )}</small></div>
+      "A"
+    )}</small></div>
 </div>`;
+  }
 }
 
 updateTime();
