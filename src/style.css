@@ -40,7 +40,7 @@ select {
   justify-content: space-between;
   padding: 30px 0;
   margin: 10px 0;
-  border-bottom: 1px dashed #272343;
+  border-bottom: 1px dashed #d3cef6;
 }
 
 .city:last-child {
@@ -53,7 +53,7 @@ select {
 }
 
 .time {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: bold;
 }
 
