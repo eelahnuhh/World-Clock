@@ -44,7 +44,7 @@ function updateCity(event) {
         "A"
       )}</small></div>
 </div>
-<a class="all-cities" href="index.html"> ← All Cities</a>`;
+<a class="all-cities" href="/"> ← All Cities</a>`;
     }
   }, 1000);
 }
